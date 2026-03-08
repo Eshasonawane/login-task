@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/loginDB")
+mongoose.connect("mongodb+srv://eshasonawane25_db_user:<db_password>@cluster0.qajflyq.mongodb.net/loginDB")
 .then(()=>console.log("MongoDB connected"))
 .catch(err=>console.log(err));
 
