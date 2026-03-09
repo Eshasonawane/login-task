@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://eshasonawane25_db_user:<db_password>@cluster0.qajflyq.mongodb.net/loginDB")
+mongoose.connect("mongodb+srv://eshasonawane25_db_user:26eJiLPvpHw9fWsi@cluster0.qajflyq.mongodb.net/loginDB")
 .then(()=>console.log("MongoDB connected"))
 .catch(err=>console.log(err));
 
@@ -38,6 +38,9 @@ app.post("/login",async(req,res)=>{
   }
 });
 
-app.listen(5000,()=>{
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log("Server running");
 });
+
